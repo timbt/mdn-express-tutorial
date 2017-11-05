@@ -6,7 +6,7 @@ var GenreSchema = Schema(
   {
     name: {type: String, required: true, min: 3, max: 100},
   }
-)
+);
 
 //Virtual for the genre's URL
 GenreSchema.Virtual('url').get(function(){
