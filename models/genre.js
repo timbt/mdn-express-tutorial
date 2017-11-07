@@ -9,7 +9,7 @@ var GenreSchema = Schema(
 );
 
 //Virtual for the genre's URL
-GenreSchema.Virtual('url').get(function(){
+GenreSchema.virtual('url').get(function(){
   return '/catalog/genre';
 });
 

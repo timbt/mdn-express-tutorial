@@ -12,7 +12,7 @@ var AuthorSchema = Schema(
 );
 
 //Virtual for the author's full name
-AuthorSchema.Virtual('name').get(function(){
+AuthorSchema.virtual('name').get(function(){
   return this.family_name + ', ' + this.first_name;
 });
 
