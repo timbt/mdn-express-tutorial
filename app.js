@@ -8,12 +8,13 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var catalog = require('./routes/catalog');
+var mongokey = require('./mongokey.js');
 
 var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://localhost/mdn-express-tutorial';
+var mongoDB = mongokey;
 mongoose.connect(mongoDB, {
   useMongoClient: true
 });
